@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorAccent"
+            android:id="@+id/profile_sign_in"
+            android:layout_marginBottom="50dp"
+            >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_account_circle_white_24dp"/>
+
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/please_sign_up"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="@string/manage_a_hostel_homestel_or_hotel"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/profile_account">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@drawable/ic_face_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"/>
+        </TableRow>
+
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/profile_booking">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                app:srcCompat="@drawable/ic_book_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bookings"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"/>
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/profile_notification">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                app:srcCompat="@drawable/ic_notifications_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send_notification"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"/>
+        </TableRow>
+
+
+
+
+
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/profile_settings">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                app:srcCompat="@drawable/ic_settings_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"/>
+        </TableRow>
+
+
+
+
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/profile_help">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                app:srcCompat="@drawable/ic_help_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/help"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"/>
+        </TableRow>
+
+
+    </LinearLayout>
+
+</FrameLayout>

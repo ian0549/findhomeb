@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="findhome.com.example.android.findhomeb.MainActivity"
+        android:label="MainActivity" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="findhome.com.example.android.findhomeb.HomeFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="findhome.com.example.android.findhomeb.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_profileFragment_to_entryFormoneFragment"
+            app:destination="@id/entryFormoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="findhome.com.example.android.findhomeb.InboxFragment"
+        android:label="fragment_inbox"
+        tools:layout="@layout/fragment_inbox">
+        <action
+            android:id="@+id/action_inboxFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/placesFragment"
+        android:name="findhome.com.example.android.findhomeb.PlacesFragment"
+        android:label="fragment_places"
+        tools:layout="@layout/fragment_places">
+        <action
+            android:id="@+id/action_placesFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/priceFragment"
+        android:name="findhome.com.example.android.findhomeb.PriceHostelFragment"
+        android:label="fragment_price"
+        tools:layout="@layout/fragment_hostelprice" >
+        <action
+            android:id="@+id/action_priceFragment_to_overviewFragment"
+            app:destination="@id/overviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/overviewFragment"
+        android:name="findhome.com.example.android.findhomeb.OverviewFragment"
+        android:label="fragment_overview"
+        tools:layout="@layout/fragment_overview" />
+    <fragment
+        android:id="@+id/hostelRoomTypeFragment"
+        android:name="findhome.com.example.android.findhomeb.HostelRoomTypeFragment"
+        android:label="HostelRoomTypeFragment" >
+        <action
+            android:id="@+id/action_hostelRoomTypeFragment_to_placeAvailability"
+            app:destination="@id/placeAvailability" />
+    </fragment>
+    <fragment
+        android:id="@+id/entryFormoneFragment"
+        android:name="findhome.com.example.android.findhomeb.EntryFormoneFragment"
+        android:label="fragment_entry_formone"
+        tools:layout="@layout/fragment_entry_formone" >
+        <action
+            android:id="@+id/action_entryFormoneFragment_to_hostelRoomTypeFragment"
+            app:destination="@id/hostelRoomTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeAvailability"
+        android:name="findhome.com.example.android.findhomeb.PlaceAvailability"
+        android:label="PlaceAvailability" >
+        <action
+            android:id="@+id/action_placeAvailability_to_priceFragment"
+            app:destination="@id/priceFragment" />
+    </fragment>
+</navigation>
