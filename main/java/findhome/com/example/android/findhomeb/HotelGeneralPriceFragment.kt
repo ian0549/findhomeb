@@ -6,19 +6,14 @@ import android.os.Bundle
 import android.support.design.button.MaterialButton
 import android.support.v4.app.Fragment
 import android.support.v7.widget.Toolbar
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 
 
-class PlaceAvailability : Fragment() {
-
-
+class HotelGeneralPriceFragment : Fragment() {
     private var listener: OnFragmentInteractionListener? = null
-
-    val preference_file_key="MYDESTINATION"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,19 +25,12 @@ class PlaceAvailability : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_place_availability, container, false)
+        return inflater.inflate(R.layout.fragment_hotel_general_price, container, false)
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
-        val prefs= activity?.getPreferences(Context.MODE_PRIVATE) ?: return
-
-
-        val destin = prefs.getString(preference_file_key,"none")
 
         val toolbar = view.findViewById<Toolbar>(R.id.my_toolbar) as Toolbar
 
@@ -50,36 +38,16 @@ class PlaceAvailability : Fragment() {
 
         toolbar.setNavigationOnClickListener {
 
-           if (destin.toString()=="hostel"){
-
-               Navigation.findNavController(it).navigate(R.id.hostelRoomTypeFragment, null)
-           }else{
-
-               Navigation.findNavController(it).navigate(R.id.generalRoomTypeFragment, null)
-
-           }
-
-
+            Navigation.findNavController(it).navigate(R.id.placeAvailability, null)
         }
 
 
-        val buttonnext: MaterialButton?= view.findViewById<MaterialButton>(R.id.button_next_place_avail)
+        val buttonnext: MaterialButton?= view.findViewById<MaterialButton>(R.id.button_next)
 
-
-
-        Log.d("MYDEST",destin.toString())
         buttonnext?.setOnClickListener{
-            when(destin.toString()) {
-                "hostel" -> Navigation.findNavController(it).navigate(R.id.priceHostelFragment, null)
-                "hotel" -> Navigation.findNavController(it).navigate(R.id.hotelGeneralPriceFragment, null)
-                "house" -> Navigation.findNavController(it).navigate(R.id.generalPriceFragment, null)
-                "apartment" -> Navigation.findNavController(it).navigate(R.id.generalPriceFragment, null)
-            }
 
-
-
+            Navigation.findNavController(it).navigate(R.id.overviewFragment, null)
         }
-
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -97,7 +65,6 @@ class PlaceAvailability : Fragment() {
         listener = null
     }
 
-
     interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         fun onFragmentInteraction(uri: Uri)
@@ -107,6 +74,6 @@ class PlaceAvailability : Fragment() {
 
         @JvmStatic
         fun newInstance() =
-                PlaceAvailability()
+                HotelGeneralPriceFragment()
     }
 }

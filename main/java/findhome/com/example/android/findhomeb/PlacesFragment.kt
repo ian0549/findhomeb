@@ -15,8 +15,9 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import findhome.com.example.android.findhomeb.R.drawable.image2
 import findhome.com.example.android.findhomeb.R.drawable.image_1
-import findhome.com.example.android.findhomeb.R.id.rvPlaces
 import findhome.com.example.android.findhomeb.R.layout.fragment_places
+
+import kotlinx.android.synthetic.main.fragment_places.*
 
 
 class PlacesFragment : Fragment(), PlacesRecyclerViewAdaptor.OnItemClickListener  , OnMapReadyCallback {
